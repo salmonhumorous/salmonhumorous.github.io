@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: home
 title: Blog
-permalink: /blog
-
+permalink: /blog/
 ---
 
 <head>
@@ -31,24 +30,4 @@ permalink: /blog
 
 <div id="canvas-container">
   <script src="/assets/scripts/blog_banner.js"></script>
-</div>
-
-<div class="home">    
-    <ul class="post-list">
-      {% for post in site.posts reversed %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        
-      </li>
-      {% endfor %}
-    </ul>
-
-
-  
 </div>
