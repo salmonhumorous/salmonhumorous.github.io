@@ -33,30 +33,25 @@ permalink: /blog
   <script src="/assets/scripts/blog_banner.js"></script>
 </div>
 
-<div class="home">
-
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}    
+<div class="home">    
     <ul class="post-list">
-      {%- for post in site.posts reversed-%}
+      {% for post in site.posts reversed %}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
-          <a class="post-link" href="{{ post.url | relative relative_url }}">
+          <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
+        {% if site.show_excerpts %}
           {{ post.excerpt }}
-        {%- endif -%}
+        {% endif %}
       </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
 
 
-  {%- endif -%}
+  {% endif %}
 
 </div>
