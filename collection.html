@@ -1,0 +1,87 @@
+---
+layout: page
+title: Collections
+permalink: /collection/
+---
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta charset="utf-8" />
+
+</head>
+
+<style type="text/css" media="screen">
+  canvas-container {
+    position : absolute;
+    top: 50px ;
+    left: 50px;
+
+  }
+  canvas {
+    max-width: 800px;
+    max-height: 400px;
+    padding-bottom: 30px;
+  }
+
+</style>
+
+<div id="canvas-container">
+  <script src="/assets/scripts/collection_banner.js"></script>
+</div>
+
+
+
+
+<style type="text/css" media="screen">
+
+    .leftimg {
+        float: left;
+        padding: 15px;
+        padding-left: 0px;
+
+
+    }
+    .rightimg {
+       float : right;
+       padding: 15px;
+       padding-right: 0px;
+
+    }
+    a,h1,h2,h3,h4,p {
+        margin-bottom: 3px;
+        padding: 0;
+    }
+    img {
+        margin-bottom: 10px;
+        padding: 0;
+        border: 3px solid;
+    }
+</style>
+
+
+{% for collection in site.collection reversed %}
+    {% assign c = collection.counter | modulo :2 %}
+    {% if c != 0  %}
+        <div class="leftimg">
+            <img src= "{{ collection.img }}" width="300" height="300">
+            <h3> {{ collection.name}} </h3>
+            <p> {{collection.posted}} </p>
+
+            <a href= "{{collection.link}}" > Collection Link  &#8599;</a>
+        </div>
+    {% else  %}
+        <div class="rightimg">
+            <img src= "{{ collection.img }}" width="300" height="300">
+            <h3> {{ collection.name}} </h3>
+            <p> {{collection.posted}} </p>
+
+            <a href= "{{collection.link}}" > Collection Link  &#8599;</a>
+        </div>
+    {% endif %}
+{% endfor %}
+
+
+
+
+
