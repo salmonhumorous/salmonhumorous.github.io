@@ -74,5 +74,8 @@ Tone.Transport.bpm.value = 180;
 ```
 
 
-We accomplished what we set out to do, but there is still much room for improvement. For instance, we may devise a function to provide randomization while maintaining the composition's overall structure. You can also use logic to progressively alter the notes that different instruments play over time.
-<br>You can check my implementation and full code on [P5js Editor](https://editor.p5js.org/salmonhumorous/sketches/7RbaJl2F2). If you create something cool with this, don't forget to share it with me. You can find many more ways to experiment with sounds in the browser by looking at Examples in P5js and Tone.js , be sure to check that out as well.
+We accomplished what we set out to do, but there is still much room for improvement. For instance, we may devise a function to provide randomization while still maintaining the composition's overall structure. So that while the notes are random, pattern still repeats. 
+<br>We can also use logic to progressively alter the notes that different instruments play over time.
+
+<br>You can check my implementation and full code on [P5js Editor](https://editor.p5js.org/salmonhumorous/sketches/7RbaJl2F2). If you create something cool with this, don't forget to share it with me. You will find many more ways to experiment with sounds in the browser by looking at Examples in P5js and Tone.js , be sure to check that out as well.
+<br> Also, this tutorial is only a introduction to creating sounds and compositions in browser. Thus, for any meaningfull compostion you will have to further build upon it. Have fun!!
